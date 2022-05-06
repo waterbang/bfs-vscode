@@ -1,15 +1,24 @@
 import * as vscode from "vscode";
 import { hideFile, updateConfiguration } from "./hide";
 
+// 识别到pkgm项目再去执行
 export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "BFS" is now active!');
 
-  updateConfiguration("files", "exclude", hideFile, 1);
+  hideFactary();
+
   let disposable = vscode.commands.registerCommand("BFS.helloWorld", () => {
     vscode.window.showInformationMessage("Hello World from PKGM!");
   });
 
   context.subscriptions.push(disposable);
+}
+
+/**
+ * 隐藏工作区文件
+ */
+function hideFactary() {
+  updateConfiguration("files", "exclude", hideFile, 2);
 }
 
 export function deactivate() {}
