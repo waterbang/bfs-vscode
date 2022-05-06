@@ -10,10 +10,21 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:BFS.helloWorld"
+		"workspaceContains:**/#bfsp.ts",
+		"workspaceContains:**/#bfsw.ts"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"menus": {
+			"editor/title": [
+				{
+					"when": "resourceLangId == markdown",
+					"command": "markdown.showPreview",
+					"alt": "markdown.showPreviewToSide",
+					"group": "navigation"
+				}
+			]
+		},
 		"commands": [
 			{
 				"command": "BFS.helloWorld",
