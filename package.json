@@ -49,15 +49,21 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"menus": {
-			"editor/title": [
-				{
-					"when": "resourceLangId == markdown",
-					"command": "markdown.showPreview",
-					"alt": "markdown.showPreviewToSide",
-					"group": "navigation"
+		"configuration": {
+			"title": "BFS",
+			"properties": {
+				"PKGM.excludes": {
+					"type": "object",
+					"default": {
+						"**/*.json": true,
+						"**/.*": true,
+						"**/*.log": true,
+						"**/*.lock": true,
+						"**/tsconfig*": true
+					},
+					"description": "pkgm项目需要隐藏的文件"
 				}
-			]
+			}
 		},
 		"commands": [
 			{

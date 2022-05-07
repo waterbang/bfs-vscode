@@ -1,5 +1,5 @@
 import * as vscode from "vscode";
-import { hideFile, updateConfiguration } from "./hide";
+import { updateConfiguration } from "./hide";
 
 // 识别到pkgm项目再去执行
 export function activate(context: vscode.ExtensionContext) {
@@ -18,6 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
  * 隐藏工作区文件
  */
 function hideFactary() {
+  const hideFile = vscode.workspace.getConfiguration("PKGM.excludes");
   updateConfiguration("files", "exclude", hideFile, 2);
 }
 

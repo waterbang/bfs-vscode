@@ -6,17 +6,15 @@
 
 ## Features
 
-[✔] PKGM 项目隐藏文件。
+[✔] `PKGM` 项目隐藏文件。
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+此插件只在 `PKGM` 构建的项目中起作用。
 
 ## Extension Settings
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
 
 This extension contributes the following settings:
 
