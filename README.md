@@ -14,12 +14,17 @@
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+现在支持配置 PKGM 隐藏规则。
 
-This extension contributes the following settings:
-
-- `myExtension.enable`: enable/disable this extension
-- `myExtension.thing`: set to `blah` to do something
+```
+PKGM.excludes: {
+  "**/*.json": true,
+  "**/.*": true,
+  "**/*.log": true,
+  "**/*.lock": true,
+  "**/tsconfig*": true,
+}
+```
 
 ### For more information
 
