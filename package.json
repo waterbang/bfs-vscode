@@ -3,7 +3,7 @@
 	"displayName": "BFS",
 	"description": "services for BFS",
 	"publisher": "bfchain",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"keywords": [
 		"bfs",
 		"pkgm",

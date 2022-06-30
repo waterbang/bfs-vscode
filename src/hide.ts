@@ -35,7 +35,7 @@ export function updateConfiguration(
 }
 
 export const hideFile = {
-  "**/*.json": true,
+  "**/package.json": true,
   "**/.*": true,
   "**/*.log": true,
   "**/*.lock": true,

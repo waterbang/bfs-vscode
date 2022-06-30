@@ -16,14 +16,24 @@
 
 现在支持配置 PKGM 隐藏规则。
 
-```
+```json
 PKGM.excludes: {
-  "**/*.json": true,
+  "**/package.json": true,
   "**/.*": true,
   "**/*.log": true,
   "**/*.lock": true,
   "**/tsconfig*": true,
 }
+```
+
+### 发布插件
+
+获取Personal Access Token
+
+```bash
+npm i -g vsce
+
+vsce publish -p <token>
 ```
 
 ### For more information
